@@ -3,29 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Surprise</title>
+    <title>Birthday Celebration</title>
 </head>
 <body>
 
-    <h1>Welcome to the Birthday Surprise!</h1>
+    <h1>Welcome to the Birthday Celebration Website!</h1>
 
-    <p>Click the button below for a special surprise:</p>
+    <p>Join the celebration and click the button below:</p>
 
     <!-- Interactive Button -->
-    <button onclick="showSurprise()">Open Surprise!</button>
+    <button onclick="playMedia()">Celebrate!</button>
 
-    <!-- JavaScript to open media file and play background music -->
+    <!-- Image Display -->
+    <img id="celebrationImage" style="display: none;" src="https://example.com/path/to/your/image.jpg" alt="Celebration Image">
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <!-- Replace the URL with the actual path to your audio file -->
+        <source src="<div><iframe width="300" height="60" src="https://vocaroo.com/embed/1jSZR4ZSwQ1t?autoplay=0" frameborder="0" allow="autoplay"></iframe><br><a href="https://voca.ro/1jSZR4ZSwQ1t" title="Vocaroo Ses Kaydedici" target="_blank">Vocaroo'da görüntüle &gt;&gt;</a></div>" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- JavaScript to open media file, show image, and play background music -->
     <script>
-        function showSurprise() {
-            // Replace the URL with the actual path to your media file (image)
+        function playMedia() {
+            // Replace the URL with the actual path to your media file
             var mediaFileUrl = '<div style="width:100%;height:0;padding-bottom:133%;position:relative;"><iframe src="https://giphy.com/embed/AXeuGf4owFmXPM8CiC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/AXeuGf4owFmXPM8CiC">via GIPHY</a></p>';
+            
+            // Show the image
+            document.getElementById('celebrationImage').style.display = 'block';
+            
+            // Play the background music
+            document.getElementById('backgroundMusic').play();
             
             // Open the media file in a new tab
             window.open(mediaFileUrl, '_blank');
-
-            // Optionally, you can add background music using an audio element
-            var audio = new Audio('<div><iframe width="300" height="60" src="https://vocaroo.com/embed/1jSZR4ZSwQ1t?autoplay=0" frameborder="0" allow="autoplay"></iframe><br><a href="https://voca.ro/1jSZR4ZSwQ1t" title="Vocaroo Ses Kaydedici" target="_blank">Vocaroo'da görüntüle &gt;&gt;</a></div>');
-            audio.play();
         }
     </script>
 
